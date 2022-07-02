@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài thi môn Javascript</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            width: 350px;
+            height: 430px;
+            position: relative;
+            border-radius: 20px;
+            background-color: aliceblue;
+            margin: auto;
+            top: 100px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+        div {
+            margin: 10px 20px 20px 10px;
+        }
+        input {
+            width: 310px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        select {
+            width: 310px;
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .but {
+            margin-top: 10px;
+            margin-left: 200px;
+        }
+        #cancel {
+            width: 50px;
+            height: 30px;
+            border-radius: 5px;
+            color: white;
+            background-color: gray;
+        }
+        #save {
+            width: 75px;
+            height: 30px;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(45, 45, 153);
+        }
+        #save:hover {
+            background-color: rgb(121, 205, 233);
+        }
+        #cancel:hover {
+            background-color: black;
+        }
+        #hienLoi {
+            color: red;
+        }
+    </style>
+    <script src="exam.js"></script>
+</head>
+<body>
+    <form class="container" id="form">
+        <h2 align="center" style="color: red;">Đăng kí thành viên</h2>
+        <hr>
+        <div>
+            <label>Họ tên</label> <br>
+            <input type="text" id="hoTen">
+        </div> 
+        <div> 
+            <label>Số điện thoại</label> <br>
+            <input type="text" id="sdt">
+        </div> 
+        <div>
+            <label>Ngày sinh</label> <br>
+            <input type="date" id="ngay">
+        </div> 
+        <div>
+            <label> Nơi sống</label> <br>
+            <select name="chon" id="chose">
+                <option value="-1"></option>
+                <option value="VN">Việt Nam</option>
+                <option value="US">Mỹ</option>
+            </select>
+        </div>
+        <hr>
+        <div class="but">
+            <button id="cancel" onclick="reset()"> Hủy </button>
+            <button id="save" onclick= " return kiemtra()">Lưu</button>
+        </div>
+        <div id="hienLoi" align="center"></div>
+    </form>
+    </script>
+</body>
+</html>
